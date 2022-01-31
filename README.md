@@ -1,3 +1,7 @@
+# Minified cpuinfo
+
+This is a reduced version of https://github.com/pytorch/cpuinfo for ARM only with all the tests removed. 
+
 # CPU INFOrmation library
 
 [![BSD (2 clause) License](https://img.shields.io/badge/License-BSD%202--Clause%20%22Simplified%22%20License-blue.svg)](https://github.com/pytorch/cpuinfo/blob/master/LICENSE)
