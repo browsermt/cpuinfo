@@ -1,7 +1,10 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5 FATAL_ERROR)
 
-# ---[ Project and semantic versioning.
-PROJECT(cpuinfo C CXX)
+# ---[ Setup project
+PROJECT(
+    cpuinfo
+    LANGUAGES C CXX
+    )
 
 # ---[ Options.
 SET(CPUINFO_LIBRARY_TYPE "default" CACHE STRING "Type of cpuinfo library (shared, static, or default) to build")
@@ -10,10 +13,12 @@ SET(CPUINFO_RUNTIME_TYPE "default" CACHE STRING "Type of runtime library (shared
 SET_PROPERTY(CACHE CPUINFO_RUNTIME_TYPE PROPERTY STRINGS default static shared)
 SET(CPUINFO_LOG_LEVEL "default" CACHE STRING "Minimum logging level (info with lower severity will be ignored)")
 SET_PROPERTY(CACHE CPUINFO_LOG_LEVEL PROPERTY STRINGS default debug info warning error fatal none)
+
 SET(CPUINFO_BUILD_TOOLS OFF)
 SET(CPUINFO_BUILD_UNIT_TESTS OFF)
 SET(CPUINFO_BUILD_MOCK_TESTS "Build cpuinfo mock tests" OFF)
 SET(CPUINFO_BUILD_BENCHMARKS "Build cpuinfo micro-benchmarks" OFF)
+SET(CPUINFO_BUILD_PKG_CONFIG "Build pkg-config manifest" OFF)
 
 # ---[ CMake options
 INCLUDE(GNUInstallDirs)
